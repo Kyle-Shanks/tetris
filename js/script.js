@@ -302,6 +302,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
     // Title or something
     ctx.fillText('Tetris',3,3);
     ctx.fillText('by Kyle',3,4);
+    // Leaderboard
+    ctx.fillText('Champ',3,6);
+    ctx.fillText('Kyle',3,7);
+    ctx.fillText('32344',3,8);
     // Instructions
     ctx.fillText('← / → = Move Horizontally',6,25);
     ctx.fillText('↑ = Rotate    // SHIFT = Switch',6,26);
