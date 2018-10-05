@@ -14,7 +14,7 @@ let highscores = [];
 getScores.on('child_added', snapshot => {
   highscores.push(snapshot.val());
   highscores = highscores.sort(scoreCompare);
-  highscores.length = 3;
+  highscores.length = Math.min(highscores.length,3);
 });
 
 // GameOver Modal
