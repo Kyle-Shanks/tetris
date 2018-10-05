@@ -33,6 +33,44 @@ body {
 .dev-info > * {
   margin-right: 10px;
 }
+.modal {
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 6px;
+}
+.modal.hidden {
+  top: 60%;
+  opacity: 0;
+}
+.modal .exit {
+  margin: 0;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+button {
+  border: none;
+  background-color: #ccc;
+  padding: 8px 10px;
+  vertical-align: bottom;
+  border-radius: 5px;
+  font-size: 14px;
+}
+button:hover {
+  background-color: #21cd92;
+}
+button:focus {
+  outline: none;
+}
+.input {
+  margin-top: 20px;
+  padding: 3px 6px;
+  font-size: 20px;
+  font-family: monospace;
+}
 @media screen and (max-width: 900px) {
   .canvas-container {
     height: 600px;

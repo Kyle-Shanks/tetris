@@ -30,9 +30,43 @@ body
   transition 0.3s cubic-bezier(0.6,0,0.2,1)
 
 .dev-info
-  margin 1em 
+  margin 1em
   & > *
     margin-right 10px
+
+.modal
+  padding 20px
+  width 400px
+  text-align center
+  background-color #FFF
+  border-radius 6px
+  &.hidden
+    top 60%
+    opacity 0
+  & .exit
+    margin 0
+    position absolute
+    top 10px
+    right 20px
+    cursor pointer
+
+button
+  border none
+  background-color #CCC
+  padding 8px 10px
+  vertical-align bottom
+  border-radius 5px
+  font-size 14px
+  &:hover
+    background-color #21CD92
+  &:focus
+    outline none
+
+.input
+  margin-top 20px
+  padding 3px 6px
+  font-size 20px
+  font-family monospace
 
 @media screen and (max-width: 900px)
   .canvas-container

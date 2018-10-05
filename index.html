@@ -5,11 +5,23 @@
     <title>Tetris</title>
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCfrA-_qAG-f7fTu_mbs1WqfGkkhKM51BM",
+        authDomain: "tetris-a1939.firebaseapp.com",
+        databaseURL: "https://tetris-a1939.firebaseio.com",
+        projectId: "tetris-a1939",
+        storageBucket: "",
+        messagingSenderId: "1059646688909"
+      };
+      firebase.initializeApp(config);
+    </script>
   </head>
   <body>
 
-    <div class="abs-center">
+    <div class="abs-center page-container">
       <div class="canvas-container">
         <canvas id="cnv" height="600px" width="600px"></canvas>
       </div>
@@ -23,5 +35,19 @@
       </div>
     </div>
 
+    <div class="abs-center modal hidden" >
+      <p class="exit" onclick="closeModal(); reset();">X</p>
+      <form class="game-over-form" onsubmit="submitScore(event);">
+        <label>Submit Your Score!</label>
+        <input class="input" type="text" placeholder="Enter Name" maxlength="8">
+        <button>Submit</button>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="js/game_functions.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/arena.js"></script>
+    <script type="text/javascript" src="js/draw_functions.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
